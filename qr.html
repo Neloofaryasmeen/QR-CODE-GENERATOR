@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR CODE GENERATOR APP</title>
+
+    <style>
+      
+
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+      body {
+          display: flex;
+          font-family: poppins;
+          justify-content: center;
+          align-items: center;
+          background-color: black;
+          color: white;
+          height: 600px;
+      }
+      
+      form {
+          height: 550px;
+          width: 450px; 
+          padding: 16px 25px 0;
+          background-color: white;
+          color: black;
+          border-radius: 10px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          overflow: hidden;  
+           transition: height 0.2s ease;
+      }
+     
+      .heading {
+          text-align: center;
+          background: rgb(8, 42, 137);
+          color: white;
+          margin: 0;
+          margin-bottom: 20px;
+          padding: 10px 0;
+          width: 100%;
+      }
+      form p{
+        margin-top: 5px;
+       font-weight: 500;
+        color: rgb(46, 38, 55);
+        font-size: 15px;
+       }  
+      
+      #website {
+          width: 80%;
+          height: 30px;
+          outline: none;
+          border: none;
+          background: gainsboro;
+          padding: 10px 20px;
+          margin-bottom: 20px;
+      }
+      
+      input {
+          width: 80px;
+          font-family: poppins;
+         font-size: 15px;
+         font-weight: 700;
+          border-radius: 10px;
+          border: none;
+          outline: none;
+          padding: 50px;
+      }
+      .form .qrcode-container{
+        display: flex;
+        padding: 55px 10px;
+        opacity: 0;
+        pointer-events: none;
+        border-radius: 5px;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #787373;
+    }
+
+    .generateBtn{
+         padding: 10px 40px;
+          border-radius: 10px;
+        color: #fff;
+        cursor: pointer;
+        margin-top: 20px;
+        font-size: 17px;
+        background: #142f74;
+      }
+      .generateBtn:hover{
+        box-shadow: 0 0 5px  rgb(97, 158, 207) ,
+      0 0 25px  cyan, 0 0 50px  cyan , 
+      0 0 100px    cyan ,    0 0 200px  cyan;
+    } 
+      
+   
+          </style>
+   
+</head>
+<body>
+   <form>
+        <h2 class="heading">QR Code Generator</h2>
+        <p>Paste a url or enter text to create QR Code</p>
+        <input type="url" id="website" name="website" placeholder="Generate QR Code" required />
+
+        <div id="qrcode-container">
+            <div id="qrcode" class="qrcode"></div>
+        </div>
+
+        <button type="button" class="generateBtn" onclick="generateQRCode()">Generate QR Code</button>
+    </form>
+
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+  
+  <script src="qr.js"></script>
+</body>
+</html>
+
+
+
+
+
